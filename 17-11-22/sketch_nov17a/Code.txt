@@ -1,0 +1,47 @@
+int led1=12;
+int pushbuttonon=8;
+int pushbuttonoff=9;
+bool buttonstateon;
+bool buttonstateoff;
+bool on = false;
+void setup() {
+  // put your setup code here, to run once:
+    pinMode(12,OUTPUT);
+    pinMode(8,INPUT);
+    pinMode(9,INPUT);
+}
+
+void loop() {
+
+      buttonstateon=!digitalRead(pushbuttonon);
+      
+      
+      
+      if(buttonstateon)
+      {
+
+        on=true;
+
+        while(on){
+
+           digitalWrite(led1,HIGH);
+
+            buttonstateoff=!digitalRead(pushbuttonoff);
+          if(buttonstateoff)
+           {
+             
+             digitalWrite(led1,LOW);
+            
+             
+             on=false;
+           }
+        
+          
+        }
+      }
+      
+
+     
+
+
+}
