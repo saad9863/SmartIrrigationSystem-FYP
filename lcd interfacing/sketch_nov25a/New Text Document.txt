@@ -1,0 +1,35 @@
+
+const int rainsensor = 13;
+const int valve = 12;
+
+int sensorPin = A5; 
+
+int limit = 700;
+int sensorValue;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(rainsensor, INPUT);
+  pinMode(valve, OUTPUT);
+  Serial.begin(9600);
+  pinMode(valve,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+    sensorValue = analogRead(A5); 
+    Serial.println("Analog Value : ");
+    Serial.println(sensorValue);
+    delay(5);
+  if (sensorValue >= limit ) {
+    digitalWrite(valve, LOW);
+    delay(5);
+  }
+  if (digitalRead(rainsensor)) {
+    digitalWrite(valve, LOW);
+    delay(5);
+  }
+  if (sensorValue < limit && !digitalRead(rainsensor)) {
+    digitalWrite(valve, HIGH);
+    delay(5);
+  }
+}
