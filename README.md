@@ -1,6 +1,3 @@
 # SmartIrrigationSystem-FYP
 
-• Programmed on Arduino taking analog inputs from sensors.
-• Utilizes GSM(SIM900A) communicated serially with Arduino for real-time data feedback on Thing speak.
-• Water flow regulation based on multiple sensors using a custom-made motorized ball valve controlled using Pulse Modulated Wave (PWM) utilizing the servo library offered by Arduino IDE
-• Cost-Effective Valve Design to reduce costs by 92.65%.
+This project is an innovative integration of sensors, actuators, and communication modules to create an automated irrigation system. Utilizing a DHT22 sensor for monitoring temperature and humidity, a rain sensor for detecting rainfall, and a soil moisture sensor, the system intelligently controls a servo motor to adjust a valve for irrigation. The inclusion of a GPRS module facilitates real-time data transmission to ThingSpeak, enabling users to remotely monitor and analyze environmental conditions. The project not only addresses the need for precise irrigation based on varying soil moisture levels but also provides a robust platform for data logging and visualization. With its thoughtful combination of hardware components and efficient use of libraries, this project stands as a practical and well-implemented solution for enhancing agricultural practices through smart irrigation.
